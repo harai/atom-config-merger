@@ -4,7 +4,7 @@
   "description": "merge atom config csons",
   "main": "index.js",
   "dependencies": {
-    "cson": "^1.6.1",
+    "cson": "^3.0.1",
     "merge": "^1.2.0"
   },
   "devDependencies": {},

@@ -7,10 +7,10 @@ var myFile = configDir + '/my.config.cson';
 var commonFile = configDir + '/common.config.cson';
 var configFile = configDir + '/config.cson';
 
-var myConfig = cson.parseFileSync(myFile);
-var commonConfig = cson.parseFileSync(commonFile);
+var myConfig = cson.parseCSONFile(myFile);
+var commonConfig = cson.parseCSONFile(commonFile);
 
 var config = merge.recursive(commonConfig, myConfig);
 
-var configCson = cson.stringifySync(config);
+var configCson = cson.stringify(config);
 fs.writeFileSync(configFile, configCson)
